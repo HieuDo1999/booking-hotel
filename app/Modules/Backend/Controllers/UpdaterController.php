@@ -21,7 +21,7 @@ class UpdaterController extends Controller
             if ($check_text == 'Update') {
                 \Artisan::call('migrate');
                 if (GMZ_VERSION == '1.0.2') {
-                    \Artisan::call('db:seed --class=TaxonomySeeder');
+                    // \Artisan::call('db:seed --class=TaxonomySeeder');
                     update_opt('version', GMZ_VERSION);
                 }
                 return redirect()->back()->with('success', __('Update database successfully'));

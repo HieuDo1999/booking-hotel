@@ -83,9 +83,9 @@ if (!function_exists('get_terms')) {
       if ($by == 'name') {
          $model = new \App\Models\Term();
          $query = $model->query()
-            ->join('gmz_taxonomy', 'gmz_term.taxonomy_id', '=', 'gmz_taxonomy.id')
-            ->select('gmz_term.*')
-            ->where('gmz_taxonomy.taxonomy_name', $val)
+            ->join('taxonomy', 'term.taxonomy_id', '=', 'taxonomy.id')
+            ->select('term.*')
+            ->where('taxonomy.taxonomy_name', $val)
             ->where('parent', 0)
             ->with('children')
             ->orderBy('id', 'DESC');
@@ -132,8 +132,8 @@ if (!function_exists('get_taxonomies')) {
    function get_taxonomies($by = 'id', $val = '', $return = 'option')
    {
       if ($by == 'name') {
-         $taxonomies = DB::table('gmz_taxonomy')
-            ->where('gmz_taxonomy.taxonomy_name', $val)
+         $taxonomies = DB::table('taxonomy')
+            ->where('taxonomy.taxonomy_name', $val)
             ->get();
       } else {
          $taxonomies = [];

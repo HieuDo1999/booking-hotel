@@ -65,7 +65,7 @@ class Handler extends ExceptionHandler
 
         if($exception instanceof ViewException || $exception instanceof QueryException){
             Artisan::call('migrate');
-            Artisan::call('db:seed --class=TaxonomySeeder');
+            // Artisan::call('db:seed --class=TaxonomySeeder');
             if($exception instanceof ViewException) {
                 return redirect()->to('/');
             }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Taxonomy extends Model
 {
-    protected $table = 'gmz_taxonomy';
+    protected $table = 'taxonomy';
 
 	protected $fillable = [
 		'taxonomy_title', 'taxonomy_name', 'taxonomy_description', 'post_type'

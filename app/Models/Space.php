@@ -10,7 +10,7 @@ class Space extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_space';
+    protected $table = 'space';
 
     public function __construct(){
         parent::__construct();
@@ -19,7 +19,7 @@ class Space extends Model
 
     public function setFillable()
     {
-        $this->fillable = Eventy::filter('gmz_space_fillable', [
+        $this->fillable = Eventy::filter('space_fillable', [
             'post_title', 'post_slug', 'post_content', 'post_description', 'location_lat', 'location_lng', 'location_address', 'location_zoom', 'thumbnail_id', 'gallery', 'base_price', 'booking_form', 'number_of_guest', 'number_of_bedroom', 'number_of_bathroom', 'size', 'min_stay', 'max_stay', 'booking_type', 'extra_services', 'space_type', 'space_amenity', 'enable_cancellation', 'cancel_before', 'cancellation_detail', 'checkin_time', 'checkout_time', 'rating', 'is_featured', 'discount_by_day', 'video', 'author', 'status', 'external_booking', 'external_link'
         ]);
     }

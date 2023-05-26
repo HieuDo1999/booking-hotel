@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_comment';
+    protected $table = 'comment';
     protected $primaryKey = 'comment_id';
 
 	protected $fillable = [

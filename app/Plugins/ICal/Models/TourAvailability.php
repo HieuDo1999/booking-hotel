@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class TourAvailability extends Model
 {
-    protected $table = 'gmz_tour_availability';
+    protected $table = 'tour_availability';
 
     protected $fillable = ['post_id', 'check_in', 'check_out', 'adult_price', 'children_price', 'infant_price', 'group_size', 'booked', 'status', 'is_base'];
 

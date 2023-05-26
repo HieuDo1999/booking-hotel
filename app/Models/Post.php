@@ -9,7 +9,7 @@ class Post extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_post';
+    protected $table = 'post';
 
 	protected $fillable = [
 		'post_title', 'post_slug', 'post_content', 'post_description', 'post_category', 'post_tag', 'thumbnail_id', 'status', 'author'

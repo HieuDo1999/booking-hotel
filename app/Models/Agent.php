@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Agent extends Model
 {
-   protected $table = 'gmz_agent';
+   protected $table = 'agent';
 
    protected $fillable = [
       'id',

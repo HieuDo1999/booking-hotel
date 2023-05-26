@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Media extends Model
 {
-    protected $table = 'gmz_media';
+    protected $table = 'media';
 
     protected $fillable = [
         'media_title', 'media_name', 'media_url',

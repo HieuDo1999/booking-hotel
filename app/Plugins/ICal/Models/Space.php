@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class Space extends Model
 {
-    protected $table = 'gmz_space';
+    protected $table = 'space';
 
     /**
      * @return Collection

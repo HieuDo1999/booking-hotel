@@ -10,7 +10,7 @@ class Room extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_room';
+    protected $table = 'room';
 
     public function __construct(){
         parent::__construct();
@@ -19,7 +19,7 @@ class Room extends Model
 
     public function setFillable()
     {
-        $this->fillable = Eventy::filter('gmz_room_fillable', [
+        $this->fillable = Eventy::filter('room_fillable', [
             'post_title', 'post_content', 'thumbnail_id', 'gallery', 'base_price', 'number_of_room', 'room_footage', 'number_of_bed', 'number_of_adult', 'number_of_children', 'room_facilities', 'hotel_id', 'author', 'status'
         ]);
     }

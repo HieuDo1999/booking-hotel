@@ -13,8 +13,8 @@ class CreateSpace108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_space', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_space", 'deleted_at')) {
+        Schema::table('space', function (Blueprint $table) {
+            if (!Schema::hasColumn("space", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateSpace108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_space', function (Blueprint $table) {
+        Schema::table('space', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

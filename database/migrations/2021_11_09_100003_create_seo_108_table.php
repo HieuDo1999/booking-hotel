@@ -13,8 +13,8 @@ class CreateSeo108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_seo', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_seo", 'deleted_at')) {
+        Schema::table('seo', function (Blueprint $table) {
+            if (!Schema::hasColumn("seo", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateSeo108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_seo', function (Blueprint $table) {
+        Schema::table('seo', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

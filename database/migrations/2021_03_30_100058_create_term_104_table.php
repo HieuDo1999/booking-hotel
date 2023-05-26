@@ -13,8 +13,8 @@ class CreateTerm104Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_term', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_term", 'author')) {
+        Schema::table('term', function (Blueprint $table) {
+            if (!Schema::hasColumn("term", 'author')) {
                 $table->bigInteger('author')->default(0);
             }
         });
@@ -27,7 +27,7 @@ class CreateTerm104Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_term', function (Blueprint $table) {
+        Schema::table('term', function (Blueprint $table) {
             $table->dropColumn([
                 'author'
             ]);

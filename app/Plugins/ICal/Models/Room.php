@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class Room extends Model
 {
-    protected $table = 'gmz_room';
+    protected $table = 'room';
 
     /**
      * @return Collection

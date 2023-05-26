@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MenuStructure extends Model
 {
-    protected $table = 'gmz_menu_structure';
+    protected $table = 'menu_structure';
 
     protected $fillable = [
         'item_id',

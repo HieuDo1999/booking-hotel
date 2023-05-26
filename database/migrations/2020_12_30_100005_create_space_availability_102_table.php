@@ -13,10 +13,10 @@ class CreateSpaceAvailability102Table extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_space_availability')){
+        if (Schema::hasTable('space_availability')){
             $this->down();
         }
-		Schema::create('gmz_space_availability', function (Blueprint $table) {
+		Schema::create('space_availability', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->integer('check_in');
@@ -35,6 +35,6 @@ class CreateSpaceAvailability102Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_space_availability');
+		Schema::drop('space_availability');
 	}
 }

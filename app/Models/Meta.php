@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meta extends Model
 {
-   protected $table = 'gmz_meta';
+   protected $table = 'meta';
 
    protected $fillable = [
       'id',

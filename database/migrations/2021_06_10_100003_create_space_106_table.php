@@ -13,14 +13,14 @@ class CreateSpace106Table extends Migration
      */
     public function up()
     {
-        Schema::table('gmz_space', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_space", 'external_booking')) {
+        Schema::table('space', function (Blueprint $table) {
+            if (!Schema::hasColumn("space", 'external_booking')) {
                 $table->string('external_booking', 3)->nullable()->default('off');
             }
-            if (!Schema::hasColumn("gmz_space", 'external_link')) {
+            if (!Schema::hasColumn("space", 'external_link')) {
                 $table->string('external_link')->nullable();
             }
-            if (!Schema::hasColumn("gmz_space", 'post_description')) {
+            if (!Schema::hasColumn("space", 'post_description')) {
                 $table->text('post_description')->nullable();
             }
         });
@@ -33,7 +33,7 @@ class CreateSpace106Table extends Migration
      */
     public function down()
     {
-        Schema::table('gmz_space', function (Blueprint $table) {
+        Schema::table('space', function (Blueprint $table) {
             $table->dropColumn([
                 'external_booking',
                 'external_link',

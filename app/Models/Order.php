@@ -12,7 +12,7 @@ class Order extends Model
     /**
      * @var string
      */
-    protected $table = 'gmz_order';
+    protected $table = 'order';
 
     public function __construct(array $attributes = [])
     {
@@ -22,7 +22,7 @@ class Order extends Model
 
     public function setFillable()
     {
-        $this->fillable = Eventy::filter('gmz_order_fillable', ['sku', 'order_token', 'description', 'post_id', 'total', 'number', 'buyer', 'owner', 'payment_type', 'checkout_data', 'token_code', 'currency', 'start_date', 'end_date', 'start_time', 'end_time', 'post_type', 'payment_status', 'transaction_id', 'status', 'first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country', 'postcode', 'note', 'change_log', 'commission']);
+        $this->fillable = Eventy::filter('order_fillable', ['sku', 'order_token', 'description', 'post_id', 'total', 'number', 'buyer', 'owner', 'payment_type', 'checkout_data', 'token_code', 'currency', 'start_date', 'end_date', 'start_time', 'end_time', 'post_type', 'payment_status', 'transaction_id', 'status', 'first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country', 'postcode', 'note', 'change_log', 'commission']);
     }
 
     public function appendChangeLog($id, $user, $action)
@@ -34,7 +34,7 @@ class Order extends Model
         ];
 
         $data = json_encode($args) . ',';
-        return DB::update('UPDATE `gmz_order` SET `change_log` = concat(ifnull(`change_log`,""),?) WHERE `id` =?', [$data, $id]);
+        return DB::update('UPDATE `order` SET `change_log` = concat(ifnull(`change_log`,""),?) WHERE `id` =?', [$data, $id]);
     }
 
     public function getTotalOrders()

@@ -1,4 +1,4 @@
-INSERT INTO `gmz_term` (`id`, `term_title`, `term_name`, `term_description`, `term_icon`, `term_image`, `term_price`, `taxonomy_id`, `parent`, `created_at`, `updated_at`, `term_location`, `author`) VALUES
+INSERT INTO `term` (`id`, `term_title`, `term_name`, `term_description`, `term_icon`, `term_image`, `term_price`, `taxonomy_id`, `parent`, `created_at`, `updated_at`, `term_location`, `author`) VALUES
 (4, '[:en]Economy[:vi]Economy[:]', 'economy', '[:en]2 Adults, 2 Bags[:vi]2 Adults, 2 Bags[:]', NULL, '16', NULL, 3, 0, '2021-01-26 07:23:09', '2021-01-30 12:56:54', '0', 0),
 (5, '[:en]Compact[:vi]Compact[:]', 'compact', '[:en]4 Adults, 2 Bags[:vi]4 Adults, 2 Bags[:]', NULL, '18', NULL, 3, 0, '2021-01-26 07:23:50', '2021-01-30 13:00:26', '0', 0),
 (6, '[:en]Standard[:vi]Standard[:]', 'standard', '[:en]5 Adults, 3 Bags[:vi]5 Adults, 2 Bags[:]', NULL, '19', NULL, 3, 0, '2021-01-26 07:24:35', '2021-01-30 13:10:47', '0', 0),

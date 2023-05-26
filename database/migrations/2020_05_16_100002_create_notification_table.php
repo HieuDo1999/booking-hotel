@@ -13,7 +13,7 @@ class CreateNotificationTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_notification', function (Blueprint $table) {
+		Schema::create('notification', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('user_from')->nullable();
             $table->bigInteger('user_to');
@@ -31,6 +31,6 @@ class CreateNotificationTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_notification');
+		Schema::drop('notification');
 	}
 }

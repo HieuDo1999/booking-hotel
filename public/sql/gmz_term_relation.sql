@@ -1,4 +1,4 @@
-INSERT INTO `gmz_term_relation` (`id`, `term_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
+INSERT INTO `term_relation` (`id`, `term_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
 (13, 14, 7, 'car', '2021-01-30 14:07:05', '2021-01-30 14:07:05'),
 (14, 15, 7, 'car', '2021-01-30 14:07:05', '2021-01-30 14:07:05'),
 (15, 16, 7, 'car', '2021-01-30 14:07:05', '2021-01-30 14:07:05'),
@@ -741,7 +741,7 @@ INSERT INTO `gmz_term_relation` (`id`, `term_id`, `post_id`, `post_type`, `creat
 (853, 108, 9, 'space', '2021-03-29 09:01:46', '2021-03-29 09:01:46'),
 (854, 107, 9, 'space', '2021-03-29 09:01:46', '2021-03-29 09:01:46'),
 (855, 106, 9, 'space', '2021-03-29 09:01:46', '2021-03-29 09:01:46');
-INSERT INTO `gmz_term_relation` (`id`, `term_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
+INSERT INTO `term_relation` (`id`, `term_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
 (856, 105, 9, 'space', '2021-03-29 09:01:46', '2021-03-29 09:01:46'),
 (857, 104, 9, 'space', '2021-03-29 09:01:46', '2021-03-29 09:01:46'),
 (858, 99, 8, 'space', '2021-03-29 09:02:06', '2021-03-29 09:02:06'),

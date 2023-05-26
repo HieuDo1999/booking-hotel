@@ -13,7 +13,7 @@ class CreateMenuTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_menu', function (Blueprint $table) {
+		Schema::create('menu', function (Blueprint $table) {
             $table->bigIncrements('menu_id');
             $table->string('menu_title');
             $table->string('menu_position')->nullable();
@@ -28,6 +28,6 @@ class CreateMenuTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_menu');
+		Schema::drop('menu');
 	}
 }

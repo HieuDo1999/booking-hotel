@@ -13,10 +13,10 @@ class CreateBeauty104nTable extends Migration
     */
    public function up()
    {
-      if (Schema::hasTable('gmz_beauty')) {
+      if (Schema::hasTable('beauty')) {
          $this->down();
       }
-      Schema::create('gmz_beauty', function (Blueprint $table) {
+      Schema::create('beauty', function (Blueprint $table) {
          $table->bigIncrements('id');
          $table->text('post_title');
          $table->string('post_slug');
@@ -62,6 +62,6 @@ class CreateBeauty104nTable extends Migration
     */
    public function down()
    {
-      Schema::dropIfExists('gmz_beauty');
+      Schema::dropIfExists('beauty');
    }
 }

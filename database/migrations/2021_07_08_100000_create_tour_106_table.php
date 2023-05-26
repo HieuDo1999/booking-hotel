@@ -13,8 +13,8 @@ class CreateTour106Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_tour", 'post_description')) {
+        Schema::table('tour', function (Blueprint $table) {
+            if (!Schema::hasColumn("tour", 'post_description')) {
                 $table->text('post_description')->nullable();
             }
         });
@@ -27,7 +27,7 @@ class CreateTour106Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
+        Schema::table('tour', function (Blueprint $table) {
             $table->dropColumn([
                 'post_description'
             ]);

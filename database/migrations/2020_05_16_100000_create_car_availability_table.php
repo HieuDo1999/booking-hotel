@@ -13,7 +13,7 @@ class CreateCarAvailabilityTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_car_availability', function (Blueprint $table) {
+		Schema::create('car_availability', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->integer('check_in');
@@ -33,6 +33,6 @@ class CreateCarAvailabilityTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_car_availability');
+		Schema::drop('car_availability');
 	}
 }

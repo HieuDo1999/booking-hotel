@@ -20,7 +20,7 @@ class InstallerController
     private function resetData()
     {
         $tables = [
-            'gmz_apartment', 'gmz_tour', 'gmz_tour_availability', 'gmz_space', 'gmz_hotel', 'gmz_room', 'gmz_room_availability', 'gmz_apartment_availability', 'gmz_space_availability', 'gmz_car', 'gmz_car_availability', '	gmz_comment', 'gmz_coupon', 'gmz_earnings', 'gmz_language', 'gmz_media', 'gmz_menu', 'gmz_menu_structure', 'gmz_notification', 'gmz_options', 'gmz_order', 'gmz_page', 'gmz_post', 'gmz_term', 'gmz_term_relation', 'gmz_withdrawal', 'gmz_agent', 'gmz_agent_availability', 'gmz_agent_relation', 'gmz_beauty', 'gmz_beauty_availability'
+            'apartment', 'tour', 'tour_availability', 'space', 'hotel', 'room', 'room_availability', 'apartment_availability', 'space_availability', 'car', 'car_availability', '	comment', 'coupon', 'earnings', 'language', 'media', 'menu', 'menu_structure', 'notification', 'options', 'order', 'page', 'post', 'term', 'term_relation', 'withdrawal', 'agent', 'agent_availability', 'agent_relation', 'beauty', 'beauty_availability'
         ];
         foreach ($tables as $table) {
             DB::statement("DELETE FROM {$table}");

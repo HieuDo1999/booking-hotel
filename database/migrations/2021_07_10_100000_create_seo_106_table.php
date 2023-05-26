@@ -13,7 +13,7 @@ class CreateSeo106Table extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_seo', function (Blueprint $table) {
+		Schema::create('seo', function (Blueprint $table) {
 			$table->bigIncrements('id');
 			$table->bigInteger('post_id');
 			$table->string('post_type', 50)->default('post');
@@ -36,6 +36,6 @@ class CreateSeo106Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_seo');
+		Schema::drop('seo');
 	}
 }

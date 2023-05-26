@@ -9,7 +9,7 @@ class Page extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_page';
+    protected $table = 'page';
 
 	protected $fillable = [
 		'post_title', 'post_slug', 'post_content', 'thumbnail_id', 'status', 'author'

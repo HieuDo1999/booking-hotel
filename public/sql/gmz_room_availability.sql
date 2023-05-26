@@ -1,4 +1,4 @@
-INSERT INTO `gmz_room_availability` (`id`, `post_id`, `hotel_id`, `total_room`, `adult_number`, `child_number`, `check_in`, `check_out`, `number`, `price`, `booked`, `status`, `created_at`, `updated_at`) VALUES
+INSERT INTO `room_availability` (`id`, `post_id`, `hotel_id`, `total_room`, `adult_number`, `child_number`, `check_in`, `check_out`, `number`, `price`, `booked`, `status`, `created_at`, `updated_at`) VALUES
 (1, 1, 6, 3, 4, 5, NULL, NULL, '10', '400', 0, 'available', '2021-03-25 02:15:11', '2021-03-25 03:13:36'),
 (2, 2, 3, 2, 3, 4, NULL, NULL, '10', '200', 0, 'available', '2021-03-25 02:52:11', '2021-03-25 02:54:28'),
 (3, 3, 3, 2, 3, 3, NULL, NULL, '10', '150', 0, 'available', '2021-03-25 02:53:57', '2021-03-25 02:54:28'),

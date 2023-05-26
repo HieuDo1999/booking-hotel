@@ -13,10 +13,10 @@ class CreateWishlist105Table extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_wishlist')){
+        if (Schema::hasTable('wishlist')){
             $this->down();
         }
-		Schema::create('gmz_wishlist', function (Blueprint $table) {
+		Schema::create('wishlist', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->integer('post_id');
             $table->string('post_type');
@@ -32,6 +32,6 @@ class CreateWishlist105Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_wishlist');
+		Schema::drop('wishlist');
 	}
 }

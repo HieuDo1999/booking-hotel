@@ -569,27 +569,27 @@ return [
             'icon' => 'fa-sticky-note',
             'screen' => 'coupon',
         ],
-        'tool' => [
-            'type' => 'parent',
-            'label' => ilangs('Tools'),
-            'icon' => 'fa-tools',
-            'id' => 'tools',
-            'child' => [
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Import Data'),
-                    'icon' => 'icon_system_import_02',
-                    'screen' => 'import-data',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('SEO'),
-                    'icon' => 'icon_system_import_02',
-                    'screen' => 'seo',
-                ],
-            ],
-            'screen' => ['import-data', 'seo']
-        ],
+        // 'tool' => [
+        //     'type' => 'parent',
+        //     'label' => ilangs('Tools'),
+        //     'icon' => 'fa-tools',
+        //     'id' => 'tools',
+        //     'child' => [
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Import Data'),
+        //             'icon' => 'icon_system_import_02',
+        //             'screen' => 'import-data',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('SEO'),
+        //             'icon' => 'icon_system_import_02',
+        //             'screen' => 'seo',
+        //         ],
+        //     ],
+        //     'screen' => ['import-data', 'seo']
+        // ],
 
     ],
     'partner_menu' => [

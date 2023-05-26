@@ -46,25 +46,25 @@ class BeautyRepository extends AbstractRepository
         $this->model = new Beauty();
         $table_name = $this->model->getTable();
         $query = $this->model->query();
-        $query->leftJoin('gmz_agent_relation as ar', 'gmz_beauty.id', 'ar.post_id');
-        $query->leftJoin('gmz_agent as a', 'ar.agent_id', 'a.id');
+        $query->leftJoin('agent_relation as ar', 'beauty.id', 'ar.post_id');
+        $query->leftJoin('agent as a', 'ar.agent_id', 'a.id');
         $query->selectRaw("{$table_name}.*, GROUP_CONCAT(DISTINCT a.id) as agent_ids, (service_ends - (service_starts + service_duration)) AS working_time ");
 
         if (is_numeric($id)) {
-            $query->where('gmz_beauty.id', $id);
+            $query->where('beauty.id', $id);
         } else if (is_array($id)) {
-            $query->whereIN('gmz_beauty.id', $id);
+            $query->whereIN('beauty.id', $id);
         }
 
         $query->whereRaw("NOT FIND_IN_SET({$dayOfWeek},day_off_week)");
 
         //check availability service
-        $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_beauty_availability AS ba WHERE ba.post_id = `gmz_beauty`.`id` AND ba.check_in = {$unixtime} AND ba.status = 'unavailable')");
+        $query->whereRaw("NOT EXISTS (SELECT id FROM beauty_availability AS ba WHERE ba.post_id = `beauty`.`id` AND ba.check_in = {$unixtime} AND ba.status = 'unavailable')");
         //check availability agent
-        $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_agent_availability AS aa WHERE aa.post_id = `a`.`id` AND aa.check_in = {$unixtime} AND aa.status = 'unavailable')");
+        $query->whereRaw("NOT EXISTS (SELECT id FROM agent_availability AS aa WHERE aa.post_id = `a`.`id` AND aa.check_in = {$unixtime} AND aa.status = 'unavailable')");
         //check total minute
-        $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_agent_availability AS aa WHERE aa.post_id = `a`.`id` AND (aa.check_in >= (`gmz_beauty`.`service_starts` + {$unixtime}) AND aa.check_out <= (`gmz_beauty`.`service_ends` + {$unixtime})) AND aa.status = 'booked' GROUP BY post_id HAVING SUM(aa.check_out - aa.check_in) > `working_time`)");
-        $query->groupBy('gmz_beauty.id');
+        $query->whereRaw("NOT EXISTS (SELECT id FROM agent_availability AS aa WHERE aa.post_id = `a`.`id` AND (aa.check_in >= (`beauty`.`service_starts` + {$unixtime}) AND aa.check_out <= (`beauty`.`service_ends` + {$unixtime})) AND aa.status = 'booked' GROUP BY post_id HAVING SUM(aa.check_out - aa.check_in) > `working_time`)");
+        $query->groupBy('beauty.id');
         $result = $query->get();
         return $result->toArray();
     }
@@ -84,8 +84,8 @@ class BeautyRepository extends AbstractRepository
         $query->selectRaw("{$table_name}.*");
 
         if ($params['service']) {
-            $query->leftJoin('gmz_term', 'gmz_beauty.service', 'gmz_term.id');
-            $query->where("gmz_term.id", $params['service']);
+            $query->leftJoin('term', 'beauty.service', 'term.id');
+            $query->where("term.id", $params['service']);
         }
 
         if (!empty($params['lat']) && !empty($params['lng'])) {
@@ -107,19 +107,19 @@ class BeautyRepository extends AbstractRepository
 
             $dayofweek = date('w', $params['checkIn']);
 
-            $query->leftJoin('gmz_agent_relation as ar', 'gmz_beauty.id', 'ar.post_id');
-            $query->leftJoin('gmz_agent as a', 'ar.agent_id', 'a.id');
+            $query->leftJoin('agent_relation as ar', 'beauty.id', 'ar.post_id');
+            $query->leftJoin('agent as a', 'ar.agent_id', 'a.id');
             $query->selectRaw("GROUP_CONCAT(DISTINCT a.id) as agent_ids, (service_ends - (service_starts + service_duration)) AS working_time ");
 
             $query->whereRaw("NOT FIND_IN_SET({$dayofweek},day_off_week)");
 
             //check availability service
-            $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_beauty_availability AS ba WHERE ba.post_id = `gmz_beauty`.`id` AND ba.check_in = {$params['checkIn']} AND ba.status = 'unavailable')");
+            $query->whereRaw("NOT EXISTS (SELECT id FROM beauty_availability AS ba WHERE ba.post_id = `beauty`.`id` AND ba.check_in = {$params['checkIn']} AND ba.status = 'unavailable')");
             //check availability agent
-            $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_agent_availability AS aa WHERE aa.post_id = `a`.`id` AND aa.check_in = {$params['checkIn']} AND aa.status = 'unavailable')");
+            $query->whereRaw("NOT EXISTS (SELECT id FROM agent_availability AS aa WHERE aa.post_id = `a`.`id` AND aa.check_in = {$params['checkIn']} AND aa.status = 'unavailable')");
             //check total minute
-            $query->whereRaw("NOT EXISTS (SELECT id FROM gmz_agent_availability AS aa WHERE aa.post_id = `a`.`id` AND (aa.check_in >= (`gmz_beauty`.`service_starts` + {$params['checkIn']}) AND aa.check_out <= (`gmz_beauty`.`service_ends` + {$params['checkIn']})) AND aa.status = 'booked' GROUP BY post_id HAVING SUM(aa.check_out - aa.check_in) > `working_time`)");
-            $query->groupBy('gmz_beauty.id');
+            $query->whereRaw("NOT EXISTS (SELECT id FROM agent_availability AS aa WHERE aa.post_id = `a`.`id` AND (aa.check_in >= (`beauty`.`service_starts` + {$params['checkIn']}) AND aa.check_out <= (`beauty`.`service_ends` + {$params['checkIn']})) AND aa.status = 'booked' GROUP BY post_id HAVING SUM(aa.check_out - aa.check_in) > `working_time`)");
+            $query->groupBy('beauty.id');
         }
 
         switch ($params['sort']) {

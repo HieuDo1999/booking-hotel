@@ -13,10 +13,10 @@ class CreateAgent104nTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasTable('gmz_agent')){
+        if (Schema::hasTable('agent')){
             $this->down();
         }
-       Schema::create('gmz_agent', function (Blueprint $table) {
+       Schema::create('agent', function (Blueprint $table) {
           $table->id();
           $table->text('post_title');
           $table->longText('post_content')->nullable();
@@ -41,7 +41,7 @@ class CreateAgent104nTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-       Schema::dropIfExists('gmz_agent');
+       Schema::dropIfExists('agent');
         Schema::enableForeignKeyConstraints();
     }
 }

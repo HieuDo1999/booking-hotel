@@ -13,10 +13,10 @@ class CreateHotel102Table extends Migration
 	 */
 	public function up()
 	{
-	    if (Schema::hasTable('gmz_hotel')){
+	    if (Schema::hasTable('hotel')){
             $this->down();
         }
-		Schema::create('gmz_hotel', function (Blueprint $table) {
+		Schema::create('hotel', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->text('post_title');
             $table->string('post_slug');
@@ -70,6 +70,6 @@ class CreateHotel102Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_hotel');
+		Schema::drop('hotel');
 	}
 }

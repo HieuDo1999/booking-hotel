@@ -182,9 +182,9 @@ class OrderRepository extends AbstractRepository
         // TODO: Implement search() method.
         $model = new Order();
         $query = $model->newQuery();
-        $query->selectRaw('users.email AS owner_email, gmz_order.*');
-        $query->join('users', 'gmz_order.owner', '=', 'users.id');
-        $query->whereRaw("users.email LIKE '{$string}%' OR gmz_order.email LIKE '{$string}%' OR gmz_order.phone LIKE '%{$string}%' OR sku LIKE '%{$string}'");
+        $query->selectRaw('users.email AS owner_email, order.*');
+        $query->join('users', 'order.owner', '=', 'users.id');
+        $query->whereRaw("users.email LIKE '{$string}%' OR order.email LIKE '{$string}%' OR order.phone LIKE '%{$string}%' OR sku LIKE '%{$string}'");
         return $query->paginate($number);
 
     }

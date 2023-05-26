@@ -13,7 +13,7 @@ class CreateLanguageTable extends Migration
      */
     public function up()
     {
-	    Schema::create('gmz_language', function (Blueprint $table) {
+	    Schema::create('language', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('code');
             $table->string('name')->nullable();
@@ -33,6 +33,6 @@ class CreateLanguageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gmz_language');
+        Schema::dropIfExists('language');
     }
 }

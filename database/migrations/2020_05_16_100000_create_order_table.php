@@ -13,7 +13,7 @@ class CreateOrderTable extends Migration
     */
    public function up()
    {
-      Schema::create('gmz_order', function (Blueprint $table) {
+      Schema::create('order', function (Blueprint $table) {
          $table->increments('id');
          $table->string('sku', 50);
          $table->string('order_token')->nullable();
@@ -58,6 +58,6 @@ class CreateOrderTable extends Migration
     */
    public function down()
    {
-		Schema::drop('gmz_order');
+		Schema::drop('order');
 	}
 }

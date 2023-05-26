@@ -10,7 +10,7 @@ class Hotel extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_hotel';
+    protected $table = 'hotel';
 
     public function __construct(){
         parent::__construct();
@@ -19,7 +19,7 @@ class Hotel extends Model
 
     public function setFillable()
     {
-        $fields = Eventy::filter('gmz_hotel_fillable', [
+        $fields = Eventy::filter('hotel_fillable', [
             'post_title', 'post_slug', 'post_content', 'post_description', 'location_lat', 'location_lng', 'location_address', 'location_zoom', 'thumbnail_id', 'gallery', 'base_price', 'extra_services', 'hotel_star', 'hotel_logo', 'video', 'policy', 'checkin_time', 'checkout_time', 'min_day_booking', 'min_day_stay', 'nearby_common', 'nearby_education', 'nearby_health', 'nearby_top_attractions', 'nearby_restaurants_cafes', 'nearby_natural_beauty', 'nearby_airports', 'faq', 'enable_cancellation', 'cancel_before', 'cancellation_detail', 'property_type', 'hotel_facilities', 'hotel_services', 'rating', 'is_featured', 'author', 'status', 'booking_form', 'external_booking', 'external_link'
         ]);
         $this->fillable = $fields;

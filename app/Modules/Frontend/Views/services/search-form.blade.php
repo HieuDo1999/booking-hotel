@@ -77,11 +77,11 @@
                     <a class="nav-link {{$tour_active}}" id="tour-search-tab" data-toggle="tab" href="#tour-search" role="tab" aria-controls="tour-search" aria-selected="false"><i class="fal fa-map-marked"></i> {{__('Tour')}}</a>
                 </li>
             @endif
-            @if(in_array(GMZ_SERVICE_BEAUTY, $srvc))
+            {{-- @if(in_array(GMZ_SERVICE_BEAUTY, $srvc))
                 <li class="nav-item">
                     <a class="nav-link" id="beauty-search-tab" data-toggle="tab" href="#beauty-search" role="tab" aria-controls="beauty-search" aria-selected="false"><i class="fal fa-spa"></i> {{__('Beauty')}}</a>
                 </li>
-            @endif
+            @endif --}}
     </ul>
     @endif
     <div class="tab-content" id="searchFormTab">
@@ -141,11 +141,11 @@
                 </div>
             @endif
 
-            @if(in_array(GMZ_SERVICE_BEAUTY, $srvc))
+            {{-- @if(in_array(GMZ_SERVICE_BEAUTY, $srvc))
                 <div class="tab-pane fade @if($srvc[0] == GMZ_SERVICE_BEAUTY)show active @endif beauty-search-form" id="beauty-search" role="tabpanel" aria-labelledby="beauty-search-tab">
                     @include('Frontend::services.beauty.search-form')
                 </div>
-            @endif
+            @endif --}}
     </div>
 </div>
 @endif

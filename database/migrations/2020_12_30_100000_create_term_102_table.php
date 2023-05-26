@@ -13,11 +13,11 @@ class CreateTerm102Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_term', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_term", 'parent')) {
+        Schema::table('term', function (Blueprint $table) {
+            if (!Schema::hasColumn("term", 'parent')) {
                 $table->bigInteger('parent')->default(0);
             }
-           if (!Schema::hasColumn("gmz_term", 'term_location')) {
+           if (!Schema::hasColumn("term", 'term_location')) {
               $table->text('term_location')->nullable();
            }
         });
@@ -30,7 +30,7 @@ class CreateTerm102Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_term', function (Blueprint $table) {
+        Schema::table('term', function (Blueprint $table) {
             $table->dropColumn([
                 'parent',
                 'term_location'

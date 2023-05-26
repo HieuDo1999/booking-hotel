@@ -13,8 +13,8 @@ class CreateBeauty108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_beauty', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_beauty", 'deleted_at')) {
+        Schema::table('beauty', function (Blueprint $table) {
+            if (!Schema::hasColumn("beauty", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateBeauty108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_beauty', function (Blueprint $table) {
+        Schema::table('beauty', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

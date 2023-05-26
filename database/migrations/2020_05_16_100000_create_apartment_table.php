@@ -13,7 +13,7 @@ class CreateApartmentTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_apartment', function (Blueprint $table) {
+		Schema::create('apartment', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->text('post_title');
             $table->string('post_slug');
@@ -62,6 +62,6 @@ class CreateApartmentTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_apartment');
+		Schema::drop('apartment');
 	}
 }

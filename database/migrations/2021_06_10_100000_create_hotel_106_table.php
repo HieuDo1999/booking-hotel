@@ -13,17 +13,17 @@ class CreateHotel106Table extends Migration
      */
     public function up()
     {
-        Schema::table('gmz_hotel', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_hotel", 'booking_form')) {
+        Schema::table('hotel', function (Blueprint $table) {
+            if (!Schema::hasColumn("hotel", 'booking_form')) {
                 $table->string('booking_form', 20)->nullable()->default('both');
             }
-            if (!Schema::hasColumn("gmz_hotel", 'external_booking')) {
+            if (!Schema::hasColumn("hotel", 'external_booking')) {
                 $table->string('external_booking', 3)->nullable()->default('off');
             }
-            if (!Schema::hasColumn("gmz_hotel", 'external_link')) {
+            if (!Schema::hasColumn("hotel", 'external_link')) {
                 $table->string('external_link')->nullable();
             }
-            if (!Schema::hasColumn("gmz_hotel", 'post_description')) {
+            if (!Schema::hasColumn("hotel", 'post_description')) {
                 $table->text('post_description')->nullable();
             }
         });
@@ -36,7 +36,7 @@ class CreateHotel106Table extends Migration
      */
     public function down()
     {
-        Schema::table('gmz_hotel', function (Blueprint $table) {
+        Schema::table('hotel', function (Blueprint $table) {
             $table->dropColumn([
                 'booking_form',
                 'external_booking',

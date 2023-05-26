@@ -13,8 +13,8 @@ class CreateTour107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_tour", 'ical')) {
+        Schema::table('tour', function (Blueprint $table) {
+            if (!Schema::hasColumn("tour", 'ical')) {
                 $table->text('ical')->nullable();
             }
         });
@@ -27,7 +27,7 @@ class CreateTour107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
+        Schema::table('tour', function (Blueprint $table) {
             $table->dropColumn([
                 'ical'
             ]);

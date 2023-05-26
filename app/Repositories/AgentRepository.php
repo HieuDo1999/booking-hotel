@@ -33,7 +33,7 @@ class AgentRepository extends AbstractRepository
         $query = $this->model->newQuery();
         $table_name = $this->model->getTable();
         $query->selectRaw("{$table_name}.*, aa.check_in, aa.check_out");
-        $query->leftJoin('gmz_agent_availability AS aa', 'gmz_agent.id', 'aa.post_id');
+        $query->leftJoin('agent_availability AS aa', 'gmz_agent.id', 'aa.post_id');
         $query->where('aa.status', 'booked');
         $query->whereIn("{$table_name}.id", $availableAgents);
         $result = $query->get();

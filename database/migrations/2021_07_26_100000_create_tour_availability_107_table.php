@@ -13,8 +13,8 @@ class CreateTourAvailability107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_tour_availability', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_tour_availability", 'is_base')) {
+        Schema::table('tour_availability', function (Blueprint $table) {
+            if (!Schema::hasColumn("tour_availability", 'is_base')) {
                 $table->integer('is_base')->default(0);
             }
         });
@@ -27,7 +27,7 @@ class CreateTourAvailability107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_tour_availability', function (Blueprint $table) {
+        Schema::table('tour_availability', function (Blueprint $table) {
             $table->dropColumn([
                 'is_base'
             ]);

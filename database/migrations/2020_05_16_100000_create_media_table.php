@@ -13,7 +13,7 @@ class CreateMediaTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_media', function (Blueprint $table) {
+		Schema::create('media', function (Blueprint $table) {
 			$table->bigIncrements('id');
 			$table->string('media_title')->nullable();
 			$table->string('media_name');
@@ -34,6 +34,6 @@ class CreateMediaTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_media');
+		Schema::drop('media');
 	}
 }

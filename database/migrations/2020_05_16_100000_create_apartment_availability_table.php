@@ -13,7 +13,7 @@ class CreateApartmentAvailabilityTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_apartment_availability', function (Blueprint $table) {
+		Schema::create('apartment_availability', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->integer('check_in');
@@ -32,6 +32,6 @@ class CreateApartmentAvailabilityTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_apartment_availability');
+		Schema::drop('apartment_availability');
 	}
 }
