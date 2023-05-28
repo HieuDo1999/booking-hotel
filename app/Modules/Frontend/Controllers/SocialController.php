@@ -19,16 +19,21 @@ class SocialController extends Controller
 {
     private function makeSocialDriver($provider)
     {
-        $config = [
-            'client_id' => get_option($provider . '_login_client_id'),
-            'client_secret' => get_option($provider . '_login_client_secret'),
-            'redirect' => get_option($provider . '_login_redirect_url')
-        ];
         switch ($provider) {
             case 'facebook':
+                $config = [
+                    'client_id' => config('services.facebook.client_id'),
+                    'client_secret' => config('services.facebook.client_secret'),
+                    'redirect' => config('services.facebook.redirect')
+                ];
                 $socialProvider = \Laravel\Socialite\Two\FacebookProvider::class;
                 break;
             case 'google':
+                $config = [
+                    'client_id' => config('services.google.client_id'),
+                    'client_secret' => config('services.google.client_secret'),
+                    'redirect' => config('services.google.redirect')
+                ];
                 $socialProvider = \Laravel\Socialite\Two\GoogleProvider::class;
                 break;
         }
@@ -70,7 +75,7 @@ class SocialController extends Controller
 
             $user = User::query()->create([
                 'first_name' => $getInfo->name,
-                'email' => $getInfo->email,
+                'email' => $getInfo->email ?? 'abc@gmail.com',
                 'provider' => $provider,
                 'provider_id' => $getInfo->id
             ]);
