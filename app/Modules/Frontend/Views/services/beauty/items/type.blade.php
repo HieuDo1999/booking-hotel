@@ -1,4 +1,4 @@
-@if(is_enable_service(GMZ_SERVICE_BEAUTY))
+{{-- @if(is_enable_service(GMZ_SERVICE_BEAUTY))
     @php
         enqueue_scripts('match-height');
         $beauty_types = get_terms('name', 'beauty-services', 'full');
@@ -37,4 +37,4 @@
             </div>
         </section>
     @endif
-@endif
+@endif --}}

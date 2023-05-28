@@ -38,11 +38,11 @@ return [
             'plural' => ilangs('Space'),
             'slug' => 'space'
         ],
-        'beauty' => [
-            'singular' => ilangs('Beauty Services'),
-            'plural' => ilangs('Beauty'),
-            'slug' => 'beauty'
-        ],
+        // 'beauty' => [
+        //     'singular' => ilangs('Beauty Services'),
+        //     'plural' => ilangs('Beauty'),
+        //     'slug' => 'beauty'
+        // ],
         'agent' => [
             'singular' => ilangs('Agent'),
             'plural' => ilangs('Agent'),
@@ -458,51 +458,51 @@ return [
             'screen' => ['all-tours', 'new-tour', 'edit-tour', 'term/tour-type', 'term/tour-include', 'term/tour-exclude', 'tour-review', 'order/tour', 'new-term/tour-type', 'edit-term/tour-type', 'new-term/tour-include', 'edit-term/tour-include', 'new-term/tour-exclude', 'edit-term/tour-exclude']
         ],
         /*beauty*/
-        'beauty' => [
-            'type' => 'parent',
-            'label' => ilangs('Beauty Services'),
-            'icon' => 'fa-spa',
-            'id' => 'beauty',
-            'service' => 'beauty',
-            'child' => [
-                [
-                    'type' => 'item',
-                    'label' => ilangs('All Beauty'),
-                    'screen' => 'all-beauty',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Add new'),
-                    'screen' => 'new-beauty',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Service Categories'),
-                    'screen' => 'term/beauty-services',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Branch'),
-                    'screen' => 'term/beauty-branch',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Agent'),
-                    'screen' => 'beauty/all-agents',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Reviews'),
-                    'screen' => 'beauty-review',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Orders'),
-                    'screen' => 'order/beauty',
-                ],
-            ],
-            'screen' => ['all-beauty', 'new-beauty', 'edit-beauty', 'term/beauty-services', 'beauty-review', 'order/beauty', 'beauty/all-agents', 'beauty/new-agent', 'beauty/edit-agent', 'term/beauty-branch']
-        ],
+        // 'beauty' => [
+        //     'type' => 'parent',
+        //     'label' => ilangs('Beauty Services'),
+        //     'icon' => 'fa-spa',
+        //     'id' => 'beauty',
+        //     'service' => 'beauty',
+        //     'child' => [
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('All Beauty'),
+        //             'screen' => 'all-beauty',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Add new'),
+        //             'screen' => 'new-beauty',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Service Categories'),
+        //             'screen' => 'term/beauty-services',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Branch'),
+        //             'screen' => 'term/beauty-branch',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Agent'),
+        //             'screen' => 'beauty/all-agents',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Reviews'),
+        //             'screen' => 'beauty-review',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Orders'),
+        //             'screen' => 'order/beauty',
+        //         ],
+        //     ],
+        //     'screen' => ['all-beauty', 'new-beauty', 'edit-beauty', 'term/beauty-services', 'beauty-review', 'order/beauty', 'beauty/all-agents', 'beauty/new-agent', 'beauty/edit-agent', 'term/beauty-branch']
+        // ],
         'heading_system' => [
             'type' => 'heading',
             'label' => ilangs('System')
@@ -803,46 +803,46 @@ return [
             ],
             'screen' => ['all-tours', 'new-tour', 'edit-tour', 'tour-review', 'order/tour']
         ],
-        'beauty' => [
-            'type' => 'parent',
-            'label' => ilangs('Beauty Services'),
-            'icon' => 'fa-spa',
-            'id' => 'beauty',
-            'service' => 'beauty',
-            'child' => [
-                [
-                    'type' => 'item',
-                    'label' => ilangs('All Beauty'),
-                    'screen' => 'all-beauty',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Add new'),
-                    'screen' => 'new-beauty',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Branch'),
-                    'screen' => 'term/beauty-branch',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Agent'),
-                    'screen' => 'beauty/all-agents',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Reviews'),
-                    'screen' => 'beauty-review',
-                ],
-                [
-                    'type' => 'item',
-                    'label' => ilangs('Orders'),
-                    'screen' => 'order/beauty',
-                ],
-            ],
-            'screen' => ['all-beauty', 'new-beauty', 'edit-beauty', 'term/beauty-services', 'beauty-review', 'order/beauty', 'beauty/all-agents', 'beauty/new-agent', 'beauty/edit-agent', 'term/beauty-branch']
-        ],
+        // 'beauty' => [
+        //     'type' => 'parent',
+        //     'label' => ilangs('Beauty Services'),
+        //     'icon' => 'fa-spa',
+        //     'id' => 'beauty',
+        //     'service' => 'beauty',
+        //     'child' => [
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('All Beauty'),
+        //             'screen' => 'all-beauty',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Add new'),
+        //             'screen' => 'new-beauty',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Branch'),
+        //             'screen' => 'term/beauty-branch',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Agent'),
+        //             'screen' => 'beauty/all-agents',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Reviews'),
+        //             'screen' => 'beauty-review',
+        //         ],
+        //         [
+        //             'type' => 'item',
+        //             'label' => ilangs('Orders'),
+        //             'screen' => 'order/beauty',
+        //         ],
+        //     ],
+        //     'screen' => ['all-beauty', 'new-beauty', 'edit-beauty', 'term/beauty-services', 'beauty-review', 'order/beauty', 'beauty/all-agents', 'beauty/new-agent', 'beauty/edit-agent', 'term/beauty-branch']
+        // ],
         'heading_system' => [
             'type' => 'heading',
             'label' => ilangs('System')
