@@ -13,8 +13,8 @@ class CreatePost108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_post', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_post", 'deleted_at')) {
+        Schema::table('post', function (Blueprint $table) {
+            if (!Schema::hasColumn("post", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreatePost108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_post', function (Blueprint $table) {
+        Schema::table('post', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

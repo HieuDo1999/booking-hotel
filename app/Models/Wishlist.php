@@ -9,7 +9,7 @@ class Wishlist extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_wishlist';
+    protected $table = 'wishlist';
 
     protected $fillable = [
         'post_id', 'post_type', 'author'

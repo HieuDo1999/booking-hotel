@@ -9,7 +9,7 @@ class Beauty extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_beauty';
+    protected $table = 'beauty';
 
     protected $fillable = [
         'id',
@@ -72,7 +72,7 @@ class Beauty extends Model
             $query->limit($limit);
         }
         if (!empty($args['post_not_in'])) {
-            $query->whereNotIn('gmz_beauty.id', $args['post_not_in']);
+            $query->whereNotIn('beauty.id', $args['post_not_in']);
         }
         if (!empty($args['status'])) {
             if (is_array($args['status'])) {
@@ -89,18 +89,18 @@ class Beauty extends Model
             $query->orHavingRaw("distance <= " . $distance);
             $query->orderBy('distance', 'ASC');
         } else {
-            $query->orderBy('gmz_beauty.id', $args['order']);
+            $query->orderBy('beauty.id', $args['order']);
         }
         if (!empty($args['terms_not_in']) || !empty($args['terms'])) {
-            $query->join('gmz_term_relation', 'gmz_beauty.id', 'gmz_term_relation.post_id');
-            $query->join('gmz_term', 'gmz_term_relation.term_id', 'gmz_term.id');
-            $query->where('gmz_term_relation.post_type', GMZ_SERVICE_BEAUTY);
+            $query->join('term_relation', 'beauty.id', 'term_relation.post_id');
+            $query->join('term', 'term_relation.term_id', 'term.id');
+            $query->where('term_relation.post_type', GMZ_SERVICE_BEAUTY);
             if (!empty($args['terms'])) {
-                $query->whereIn('gmz_term.id', $args['terms']);
+                $query->whereIn('term.id', $args['terms']);
             }
 
             if (!empty($args['terms_not_in'])) {
-                $query->whereNotIn('gmz_term.id', $args['terms_not_in']);
+                $query->whereNotIn('term.id', $args['terms_not_in']);
             }
         }
         return $query->get();
@@ -108,7 +108,7 @@ class Beauty extends Model
 
     public function agent()
     {
-        return $this->belongstoMany(Agent::class, 'gmz_agent_relation', 'post_id', 'agent_id');
+        return $this->belongstoMany(Agent::class, 'agent_relation', 'post_id', 'agent_id');
     }
 
     public function service()

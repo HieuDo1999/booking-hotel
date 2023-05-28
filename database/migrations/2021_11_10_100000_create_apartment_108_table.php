@@ -13,8 +13,8 @@ class CreateApartment108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_apartment', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_apartment", 'deleted_at')) {
+        Schema::table('apartment', function (Blueprint $table) {
+            if (!Schema::hasColumn("apartment", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateApartment108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_apartment', function (Blueprint $table) {
+        Schema::table('apartment', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

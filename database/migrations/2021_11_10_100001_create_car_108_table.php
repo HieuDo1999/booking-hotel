@@ -13,8 +13,8 @@ class CreateCar108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_car', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_car", 'deleted_at')) {
+        Schema::table('car', function (Blueprint $table) {
+            if (!Schema::hasColumn("car", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateCar108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_car', function (Blueprint $table) {
+        Schema::table('car', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

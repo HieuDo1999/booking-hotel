@@ -9,7 +9,7 @@ class Language extends Model
 {
     use Notifiable;
 
-    protected $table = 'gmz_language';
+    protected $table = 'language';
 
     protected $primaryKey = 'id';
 

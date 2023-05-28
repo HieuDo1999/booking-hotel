@@ -7,7 +7,7 @@ use TorMorten\Eventy\Facades\Eventy;
 
 class TourAvailability extends Model
 {
-    protected $table = 'gmz_tour_availability';
+    protected $table = 'tour_availability';
     protected $primaryKey = 'id';
 
     public function __construct(array $attributes = [])
@@ -18,6 +18,6 @@ class TourAvailability extends Model
 
     public function setFillable()
     {
-        $this->fillable =  Eventy::filter('gmz_tour_availability_fillable', ['post_id', 'check_in', 'check_out', 'adult_price', 'children_price', 'infant_price', 'group_size', 'booked', 'status', 'is_base']);
+        $this->fillable =  Eventy::filter('tour_availability_fillable', ['post_id', 'check_in', 'check_out', 'adult_price', 'children_price', 'infant_price', 'group_size', 'booked', 'status', 'is_base']);
     }
 }

@@ -13,7 +13,7 @@ class CreateCarTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_car', function (Blueprint $table) {
+		Schema::create('car', function (Blueprint $table) {
 			$table->bigIncrements('id');
          $table->text('post_title');
          $table->string('post_slug');
@@ -60,6 +60,6 @@ class CreateCarTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_car');
+		Schema::drop('car');
 	}
 }

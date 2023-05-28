@@ -13,7 +13,7 @@ class CreateCommentTable extends Migration
      */
     public function up()
     {
-        Schema::create('gmz_comment', function (Blueprint $table) {
+        Schema::create('comment', function (Blueprint $table) {
             $table->bigIncrements('comment_id');
             $table->integer('post_id');
             $table->string('comment_title')->nullable();
@@ -36,6 +36,6 @@ class CreateCommentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gmz_comment');
+        Schema::dropIfExists('comment');
     }
 }

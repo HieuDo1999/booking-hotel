@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Term extends Model
 {
-    protected $table = 'gmz_term';
+    protected $table = 'term';
 
 	protected $fillable = [
 		'term_title', 'term_name', 'term_description', 'term_icon', 'term_image', 'term_price', 'taxonomy_id', 'parent', 'term_location', 'author'

@@ -13,7 +13,7 @@ class CreateTaxonomyTable extends Migration
      */
     public function up()
     {
-        Schema::create('gmz_taxonomy', function (Blueprint $table) {
+        Schema::create('taxonomy', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('taxonomy_title');
             $table->string('taxonomy_name');
@@ -30,6 +30,6 @@ class CreateTaxonomyTable extends Migration
      */
     public function down()
     {
-        Schema::drop('gmz_taxonomy');
+        Schema::drop('taxonomy');
     }
 }

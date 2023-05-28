@@ -13,8 +13,8 @@ class CreateCarAvailability107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_car_availability', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_car_availability", 'is_base')) {
+        Schema::table('car_availability', function (Blueprint $table) {
+            if (!Schema::hasColumn("car_availability", 'is_base')) {
                 $table->integer('is_base')->default(0);
             }
         });
@@ -27,7 +27,7 @@ class CreateCarAvailability107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_car_availability', function (Blueprint $table) {
+        Schema::table('car_availability', function (Blueprint $table) {
             $table->dropColumn([
                 'is_base'
             ]);

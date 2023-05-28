@@ -13,10 +13,10 @@ class CreateTour104nTable extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_tour')){
+        if (Schema::hasTable('tour')){
             $this->down();
         }
-		Schema::create('gmz_tour', function (Blueprint $table) {
+		Schema::create('tour', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->text('post_title');
             $table->string('post_slug');
@@ -65,6 +65,6 @@ class CreateTour104nTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_tour');
+		Schema::drop('tour');
 	}
 }

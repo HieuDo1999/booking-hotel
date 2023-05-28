@@ -10,7 +10,7 @@ class Tour extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_tour';
+    protected $table = 'tour';
 
     public function __construct(){
         parent::__construct();
@@ -19,7 +19,7 @@ class Tour extends Model
 
     public function setFillable()
     {
-        $this->fillable = Eventy::filter('gmz_tour_fillable', [
+        $this->fillable = Eventy::filter('tour_fillable', [
             'post_title', 'post_slug', 'post_content', 'location_lat', 'location_lng', 'location_address', 'location_country', 'location_zoom', 'thumbnail_id', 'gallery', 'booking_form', 'extra_services', 'enable_cancellation', 'cancel_before', 'cancellation_detail', 'rating', 'is_featured', 'video', 'author', 'status', 'adult_price', 'children_price', 'infant_price', 'group_size', 'duration', 'booking_type', 'external_link', 'tour_type', 'tour_include', 'tour_exclude', 'highlight', 'itinerary', 'faq', 'package_start_date', 'package_end_date'
         ]);
     }

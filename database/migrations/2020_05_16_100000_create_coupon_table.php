@@ -13,7 +13,7 @@ class CreateCouponTable extends Migration
     */
    public function up()
    {
-      Schema::create('gmz_coupon', function (Blueprint $table) {
+      Schema::create('coupon', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('code');
           $table->string('description')->nullable();
@@ -33,6 +33,6 @@ class CreateCouponTable extends Migration
     */
    public function down()
    {
-		Schema::drop('gmz_coupon');
+		Schema::drop('coupon');
 	}
 }

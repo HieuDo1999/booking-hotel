@@ -13,8 +13,8 @@ class CreateRoom107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_room', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_room", 'ical')) {
+        Schema::table('room', function (Blueprint $table) {
+            if (!Schema::hasColumn("room", 'ical')) {
                 $table->text('ical')->nullable();
             }
         });
@@ -27,7 +27,7 @@ class CreateRoom107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_room', function (Blueprint $table) {
+        Schema::table('room', function (Blueprint $table) {
             $table->dropColumn([
                 'ical'
             ]);

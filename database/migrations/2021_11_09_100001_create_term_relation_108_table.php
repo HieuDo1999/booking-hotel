@@ -13,8 +13,8 @@ class CreateTermRelation108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_term_relation', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_term_relation", 'deleted_at')) {
+        Schema::table('term_relation', function (Blueprint $table) {
+            if (!Schema::hasColumn("term_relation", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateTermRelation108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_term_relation', function (Blueprint $table) {
+        Schema::table('term_relation', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

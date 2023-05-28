@@ -13,7 +13,7 @@ class CreatePageTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_page', function (Blueprint $table) {
+		Schema::create('page', function (Blueprint $table) {
 			$table->bigIncrements('id');
 			$table->text('post_title');
 			$table->string('post_slug');
@@ -32,6 +32,6 @@ class CreatePageTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_page');
+		Schema::drop('page');
 	}
 }

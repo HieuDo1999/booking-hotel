@@ -1,4 +1,4 @@
-INSERT INTO `gmz_agent_relation` (`id`, `agent_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
+INSERT INTO `agent_relation` (`id`, `agent_id`, `post_id`, `post_type`, `created_at`, `updated_at`) VALUES
 (1, 1, 3, 'beauty', NULL, NULL),
 (2, 2, 3, 'beauty', NULL, NULL),
 (3, 2, 4, 'beauty', NULL, NULL),

@@ -13,8 +13,8 @@ class CreateComment108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_comment', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_comment", 'deleted_at')) {
+        Schema::table('comment', function (Blueprint $table) {
+            if (!Schema::hasColumn("comment", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateComment108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_comment', function (Blueprint $table) {
+        Schema::table('comment', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

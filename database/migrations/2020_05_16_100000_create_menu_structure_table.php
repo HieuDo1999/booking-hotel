@@ -13,7 +13,7 @@ class CreateMenuStructureTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_menu_structure', function (Blueprint $table) {
+		Schema::create('menu_structure', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('item_id')->nullable();
             $table->string('parent_id')->nullable();
@@ -40,6 +40,6 @@ class CreateMenuStructureTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_menu_structure');
+		Schema::drop('menu_structure');
 	}
 }

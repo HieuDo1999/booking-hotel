@@ -13,8 +13,8 @@ class CreateApartment107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_apartment', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_apartment", 'ical')) {
+        Schema::table('apartment', function (Blueprint $table) {
+            if (!Schema::hasColumn("apartment", 'ical')) {
                 $table->text('ical')->nullable();
             }
         });
@@ -27,7 +27,7 @@ class CreateApartment107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_apartment', function (Blueprint $table) {
+        Schema::table('apartment', function (Blueprint $table) {
             $table->dropColumn([
                 'ical'
             ]);

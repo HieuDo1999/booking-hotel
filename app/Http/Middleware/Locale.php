@@ -30,39 +30,39 @@ class Locale
                 $langs = get_languages();
                 if(!empty($langs)){
                     if(in_array($lang, $langs)){
-                        $_SESSION['gmz_language'] = $lang;
+                        $_SESSION['language'] = $lang;
                     }
                 }
             }else{
                 $currentSectionLang = '';
-                if(isset($_SESSION['gmz_language'])){
-                    $currentSectionLang = $_SESSION['gmz_language'];
+                if(isset($_SESSION['language'])){
+                    $currentSectionLang = $_SESSION['language'];
                 }else{
-                    if(isset($_COOKIE['gmz_language'])){
-                        $currentSectionLang = $_COOKIE['gmz_language'];
+                    if(isset($_COOKIE['language'])){
+                        $currentSectionLang = $_COOKIE['language'];
                     }
                 }
                 $langs = get_languages();
                 if(empty($currentSectionLang)){
                     if(!empty($langs)){
-                        $_SESSION['gmz_language'] = $langs[0];
+                        $_SESSION['language'] = $langs[0];
                     }
                 }else{
                     if(!empty($langs)){
                         if(!in_array($currentSectionLang, $langs)){
-                            if(isset($_SESSION['gmz_language'])){
-                                unset($_SESSION['gmz_language']);
+                            if(isset($_SESSION['language'])){
+                                unset($_SESSION['language']);
                             }
                         }else {
-                            $_SESSION['gmz_language'] = $currentSectionLang;
+                            $_SESSION['language'] = $currentSectionLang;
                         }
                     }
                 }
             }
 
-            if(isset($_SESSION['gmz_language'])){
-                $language = $_SESSION['gmz_language'];
-                setcookie("gmz_language", $language);
+            if(isset($_SESSION['language'])){
+                $language = $_SESSION['language'];
+                setcookie("language", $language);
             }else{
                 $lang_option = get_option('site_language', '');
                 if(empty($lang_option)){

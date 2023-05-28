@@ -1,4 +1,4 @@
-INSERT INTO `gmz_menu_structure` (`id`, `item_id`, `parent_id`, `depth`, `left`, `right`, `name`, `type`, `post_id`, `post_title`, `url`, `class`, `menu_id`, `menu_lang`, `target_blank`, `created_at`, `updated_at`) VALUES
+INSERT INTO `menu_structure` (`id`, `item_id`, `parent_id`, `depth`, `left`, `right`, `name`, `type`, `post_id`, `post_title`, `url`, `class`, `menu_id`, `menu_lang`, `target_blank`, `created_at`, `updated_at`) VALUES
 (86, NULL, NULL, '0', '1', '14', '', '', '', '', '', '', '2', 'en', 0, '2021-01-31 00:45:44', '2021-01-31 00:45:44'),
 (87, '1', NULL, '1', '2', '3', 'Contact Us', 'custom', '0', 'Contact US', 'http://ibooking.booteam.co/contact-us', '', '2', 'en', 0, '2021-01-31 00:45:44', '2021-01-31 00:45:44'),
 (88, '2', NULL, '1', '4', '5', 'Become A Partner', 'custom', '0', 'Become A Partner', 'http://ibooking.booteam.co/become-a-partner', '', '2', 'en', 0, '2021-01-31 00:45:44', '2021-01-31 00:45:44'),

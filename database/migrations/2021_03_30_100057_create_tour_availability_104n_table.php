@@ -13,10 +13,10 @@ class CreateTourAvailability104nTable extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_tour_availability')){
+        if (Schema::hasTable('tour_availability')){
             $this->down();
         }
-		Schema::create('gmz_tour_availability', function (Blueprint $table) {
+		Schema::create('tour_availability', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->integer('check_in');
@@ -38,6 +38,6 @@ class CreateTourAvailability104nTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_tour_availability');
+		Schema::drop('tour_availability');
 	}
 }

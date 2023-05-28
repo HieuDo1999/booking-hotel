@@ -13,10 +13,10 @@ class CreateSpace102Table extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_space')){
+        if (Schema::hasTable('space')){
             $this->down();
         }
-		Schema::create('gmz_space', function (Blueprint $table) {
+		Schema::create('space', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->text('post_title');
             $table->string('post_slug');
@@ -65,6 +65,6 @@ class CreateSpace102Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_space');
+		Schema::drop('space');
 	}
 }

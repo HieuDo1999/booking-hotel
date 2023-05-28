@@ -13,14 +13,14 @@ class CreateTour108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_tour", 'deleted_at')) {
+        Schema::table('tour', function (Blueprint $table) {
+            if (!Schema::hasColumn("tour", 'deleted_at')) {
                 $table->softDeletes();
             }
-            if (!Schema::hasColumn("gmz_tour", 'package_start_date')) {
+            if (!Schema::hasColumn("tour", 'package_start_date')) {
                 $table->string('package_start_date')->nullable();
             }
-            if (!Schema::hasColumn("gmz_tour", 'package_end_date')) {
+            if (!Schema::hasColumn("tour", 'package_end_date')) {
                 $table->string('package_end_date')->nullable();
             }
         });
@@ -33,7 +33,7 @@ class CreateTour108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_tour', function (Blueprint $table) {
+        Schema::table('tour', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at',
                 'package_start_date',

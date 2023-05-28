@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class Tour extends Model
 {
-    protected $table = 'gmz_tour';
+    protected $table = 'tour';
 
     /**
      * @return Collection

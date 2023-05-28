@@ -13,12 +13,12 @@ class CreateAgentAvailability104nnTable extends Migration
     */
    public function up()
    {
-       if (Schema::hasTable('gmz_agent_availability')){
+       if (Schema::hasTable('agent_availability')){
            $this->down();
        }
-      Schema::create('gmz_agent_availability', function (Blueprint $table) {
+      Schema::create('agent_availability', function (Blueprint $table) {
          $table->bigIncrements('id');
-         $table->foreignId('post_id')->constrained('gmz_agent')->onDelete('cascade');
+         $table->foreignId('post_id')->constrained('agent')->onDelete('cascade');
          $table->integer('check_in');
          $table->integer('check_out')->nullable();
          $table->string('status')->nullable();
@@ -35,6 +35,6 @@ class CreateAgentAvailability104nnTable extends Migration
     */
    public function down()
    {
-      Schema::drop('gmz_agent_availability');
+      Schema::drop('agent_availability');
    }
 }

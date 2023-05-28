@@ -13,7 +13,7 @@ class CreateTermTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_term', function (Blueprint $table) {
+		Schema::create('term', function (Blueprint $table) {
 			$table->bigIncrements('id');
 			$table->text('term_title');
 			$table->string('term_name');
@@ -21,7 +21,7 @@ class CreateTermTable extends Migration
 			$table->string('term_icon')->nullable();
 			$table->string('term_image')->nullable();
 			$table->string('term_price')->nullable();
-            $table->foreignId('taxonomy_id')->constrained('gmz_taxonomy')->onDelete('cascade');
+            $table->foreignId('taxonomy_id')->constrained('taxonomy')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}
@@ -33,6 +33,6 @@ class CreateTermTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_term');
+		Schema::drop('term');
 	}
 }

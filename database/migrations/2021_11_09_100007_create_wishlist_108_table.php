@@ -13,8 +13,8 @@ class CreateWishlist108Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_wishlist', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_wishlist", 'deleted_at')) {
+        Schema::table('wishlist', function (Blueprint $table) {
+            if (!Schema::hasColumn("wishlist", 'deleted_at')) {
                 $table->softDeletes();
             }
         });
@@ -27,7 +27,7 @@ class CreateWishlist108Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_wishlist', function (Blueprint $table) {
+        Schema::table('wishlist', function (Blueprint $table) {
             $table->dropColumn([
                 'deleted_at'
             ]);

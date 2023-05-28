@@ -9,7 +9,7 @@ class TermRelation extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_term_relation';
+    protected $table = 'term_relation';
 
 	protected $fillable = [
 		'term_id', 'post_id', 'post_type'

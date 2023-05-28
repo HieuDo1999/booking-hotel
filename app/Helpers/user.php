@@ -7,7 +7,7 @@
  */
 if(!function_exists('get_user_meta')){
     function get_user_meta($userID, $metaKey){
-        $meta = DB::table('gmz_meta')
+        $meta = DB::table('meta')
             ->where('post_id', $userID)
             ->where('post_type', 'user')
             ->where('meta_key', $metaKey)

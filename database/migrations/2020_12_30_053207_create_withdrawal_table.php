@@ -13,7 +13,7 @@ class CreateWithdrawalTable extends Migration
      */
     public function up()
     {
-        Schema::create('gmz_withdrawal', function (Blueprint $table) {
+        Schema::create('withdrawal', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
             $table->float('withdraw')->default(0);

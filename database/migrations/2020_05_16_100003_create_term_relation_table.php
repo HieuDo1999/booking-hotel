@@ -13,9 +13,9 @@ class CreateTermRelationTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_term_relation', function (Blueprint $table) {
+		Schema::create('term_relation', function (Blueprint $table) {
 			$table->bigIncrements('id');
-            $table->foreignId('term_id')->constrained('gmz_term')->onDelete('cascade');
+            $table->foreignId('term_id')->constrained('term')->onDelete('cascade');
             $table->bigInteger('post_id');
 			$table->string('post_type', 50)->nullable();
 			$table->timestamps();
@@ -29,6 +29,6 @@ class CreateTermRelationTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_term_relation');
+		Schema::drop('term_relation');
 	}
 }

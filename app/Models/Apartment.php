@@ -10,7 +10,7 @@ class Apartment extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_apartment';
+    protected $table = 'apartment';
 
     public function __construct(){
         parent::__construct();
@@ -19,7 +19,7 @@ class Apartment extends Model
 
     public function setFillable()
     {
-        $this->fillable = Eventy::filter('gmz_apartment_fillable', [
+        $this->fillable = Eventy::filter('apartment_fillable', [
             'post_title', 'post_slug', 'post_content', 'post_description', 'location_lat', 'location_lng', 'location_address', 'location_zoom', 'thumbnail_id', 'gallery', 'base_price', 'booking_form', 'number_of_guest', 'number_of_bedroom', 'number_of_bathroom', 'size', 'min_stay', 'max_stay', 'extra_services', 'apartment_type', 'apartment_amenity', 'enable_cancellation', 'cancel_before', 'cancellation_detail', 'checkin_time', 'checkout_time', 'rating', 'is_featured', 'discount_by_day', 'video', 'author', 'status', 'external_booking', 'external_link'
         ]);
     }

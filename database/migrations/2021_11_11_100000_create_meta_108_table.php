@@ -13,7 +13,7 @@ class CreateMeta108Table extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('gmz_meta', function (Blueprint $table) {
+		Schema::create('meta', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->string('post_type')->nullable();
@@ -30,6 +30,6 @@ class CreateMeta108Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_meta');
+		Schema::drop('meta');
 	}
 }

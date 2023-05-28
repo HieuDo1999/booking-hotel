@@ -1,4 +1,4 @@
-INSERT INTO `gmz_notification` (`id`, `user_from`, `user_to`, `title`, `message`, `type`, `created_at`, `updated_at`) VALUES
+INSERT INTO `notification` (`id`, `user_from`, `user_to`, `title`, `message`, `type`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 'New request booking for Car', 'New request booking for Car service on 2020-02-01', 'system', '2021-02-01 06:42:03', '2021-02-01 06:42:03'),
 (2, 1, 1, 'New request booking for Apartment', 'New request booking for Apartment service on 2020-02-01', 'system', '2021-02-01 06:42:03', '2021-02-01 06:42:03'),
 (3, 1, 1, 'New enquiry request for Car', 'New enquiry request for Car service on 2020-02-01', 'system', '2021-02-01 06:42:03', '2021-02-01 06:42:03'),

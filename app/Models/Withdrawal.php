@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Withdrawal extends Model
 {
-   protected $table = 'gmz_withdrawal';
+   protected $table = 'withdrawal';
 
    protected $fillable = [
       'user_id','withdraw','status'

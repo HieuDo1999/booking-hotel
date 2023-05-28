@@ -13,8 +13,8 @@ class CreateSpace107Table extends Migration
 	 */
 	public function up()
 	{
-        Schema::table('gmz_space', function (Blueprint $table) {
-            if (!Schema::hasColumn("gmz_space", 'ical')) {
+        Schema::table('space', function (Blueprint $table) {
+            if (!Schema::hasColumn("space", 'ical')) {
                 $table->text('ical')->nullable();
             }
         });
@@ -27,7 +27,7 @@ class CreateSpace107Table extends Migration
 	 */
 	public function down()
 	{
-        Schema::table('gmz_space', function (Blueprint $table) {
+        Schema::table('space', function (Blueprint $table) {
             $table->dropColumn([
                 'ical'
             ]);

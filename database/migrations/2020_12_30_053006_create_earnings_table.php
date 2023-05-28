@@ -13,7 +13,7 @@ class CreateEarningsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gmz_earnings', function (Blueprint $table) {
+        Schema::create('earnings', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
             $table->float('total')->default(0);

@@ -42,7 +42,7 @@ class SeoController extends Controller
                     $enable = get_option($service_name . '_enable', 'on');
                 }
                 if ($enable == 'on') {
-                    $count = DB::table('gmz_' . $service_name)->where('status', 'publish')->count();
+                    $count = DB::table('' . $service_name)->where('status', 'publish')->count();
 
                     if ($count > $posts_per_page) {
                         $max_page = (int)ceil($count / $posts_per_page);
@@ -120,7 +120,7 @@ class SeoController extends Controller
 
                     $posts_per_page = admin_config('posts_per_page', 'seo');
                     $offset = ($page - 1) * $posts_per_page;
-                    $posts = DB::table('gmz_' . $service)->where('status', 'publish')->limit($posts_per_page)->offset($offset)->orderByDesc('id')->get();
+                    $posts = DB::table('' . $service)->where('status', 'publish')->limit($posts_per_page)->offset($offset)->orderByDesc('id')->get();
 
                     if (!$posts->isEmpty()) {
                         foreach ($posts as $post) {

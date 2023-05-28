@@ -9,7 +9,7 @@ class Car extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'gmz_car';
+    protected $table = 'car';
 
     protected $fillable = [
         'post_title', 'post_slug', 'post_content', 'post_description', 'location_lat', 'location_lng', 'location_address', 'location_zoom', 'thumbnail_id', 'gallery', 'base_price', 'booking_form', 'enable_cancellation', 'cancel_before', 'cancellation_detail', 'quantity', 'equipments', 'car_type', 'car_feature', 'car_equipment', 'rating', 'is_featured', 'extra_price', 'discount_by_day', 'insurance_plan', 'passenger', 'gear_shift', 'baggage', 'door', 'video', 'author', 'status', 'external_booking', 'external_link'
@@ -87,7 +87,7 @@ class Car extends Model
 
         if(!empty($data['checkIn']) && !empty($data['checkOut'])){
 
-            $avai_table = 'gmz_car_availability';
+            $avai_table = 'car_availability';
 
             $check_in = strtotime($data['checkIn']);
             $check_out = strtotime($data['checkOut']);

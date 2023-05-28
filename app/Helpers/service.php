@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 if (!function_exists('hard_delete_wishlist')) {
     function hard_delete_wishlist($post_id, $post_type)
     {
-        DB::table('gmz_wishlist')->where([
+        DB::table('wishlist')->where([
             'post_id' => $post_id,
             'post_type' => $post_type
         ])->delete();
@@ -21,7 +21,7 @@ if (!function_exists('hard_delete_wishlist')) {
 if (!function_exists('restore_wishlist')) {
     function restore_wishlist($post_id, $post_type)
     {
-        DB::table('gmz_wishlist')->where([
+        DB::table('wishlist')->where([
             'post_id' => $post_id,
             'post_type' => $post_type
         ])->update(['deleted_at' => null]);
@@ -34,7 +34,7 @@ if (!function_exists('delete_wishlist')) {
         $user_id = get_current_user_id();
         $cache_key = 'wishlist' . $user_id . $post_type;
         \Illuminate\Support\Facades\Cache::pull($cache_key);
-        DB::table('gmz_wishlist')->where([
+        DB::table('wishlist')->where([
             'post_id' => $post_id,
             'post_type' => $post_type
         ])->update(['deleted_at' => \Illuminate\Support\Carbon::now()]);
@@ -49,7 +49,7 @@ if (!function_exists('list_wishlist')) {
         if (\Illuminate\Support\Facades\Cache::has($cache_key)) {
             return \Illuminate\Support\Facades\Cache::get($cache_key);
         } else {
-            $data = DB::table('gmz_wishlist')->select('post_id')->where([
+            $data = DB::table('wishlist')->select('post_id')->where([
                 'post_type' => $post_type,
                 'author' => $user_id
             ])->pluck('post_id');
@@ -1011,7 +1011,7 @@ if(!function_exists('list_service_status')) {
 
 if(!function_exists('get_meta')){
     function get_meta($postID, $metaKey, $postType = 'page'){
-        $meta = DB::table('gmz_meta')
+        $meta = DB::table('meta')
             ->where('post_id', $postID)
             ->where('post_type', $postType)
             ->where('meta_key', $metaKey)

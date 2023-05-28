@@ -13,10 +13,10 @@ class CreateRoom102Table extends Migration
 	 */
 	public function up()
 	{
-        if (Schema::hasTable('gmz_room')){
+        if (Schema::hasTable('room')){
             $this->down();
         }
-		Schema::create('gmz_room', function (Blueprint $table) {
+		Schema::create('room', function (Blueprint $table) {
 			$table->bigIncrements('id');
             $table->text('post_title');
             $table->longText('post_content')->nullable();
@@ -43,6 +43,6 @@ class CreateRoom102Table extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('gmz_room');
+		Schema::drop('room');
 	}
 }
