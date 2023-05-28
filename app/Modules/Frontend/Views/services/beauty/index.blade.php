@@ -1,4 +1,4 @@
-@extends('Frontend::layouts.master')
+{{-- @extends('Frontend::layouts.master')
 
 @section('title', __('Beauty Services'))
 
@@ -22,4 +22,4 @@
     @include('Frontend::services.beauty.items.testimonial')
     @include('Frontend::components.sections.blog')
 @stop
-
+ --}}
