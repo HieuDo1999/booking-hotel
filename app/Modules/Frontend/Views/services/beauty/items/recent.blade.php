@@ -1,4 +1,4 @@
-@if(is_enable_service(GMZ_SERVICE_BEAUTY))
+{{-- @if(is_enable_service(GMZ_SERVICE_BEAUTY))
     @php
         enqueue_scripts('match-height');
         $list_beauty = get_posts([
@@ -22,4 +22,4 @@
             </div>
         </section>
     @endif
-@endif
+@endif --}}
