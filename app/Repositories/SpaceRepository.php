@@ -96,7 +96,7 @@ class SpaceRepository extends AbstractRepository
 
             //Check with booking table
             if (empty($booking_type) || $booking_type == 'per_day') {
-                $order_table = 'gmz_order';
+                $order_table = 'order';
                 $query->selectRaw("{$order_table}.id AS order_id, {$order_table}.post_id as service_id, {$order_table}.status as order_status, {$order_table}.post_type, {$order_table}.start_date, {$order_table}.end_date");
                 $query->selectRaw("COUNT({$order_table}.id) as count_order");
 

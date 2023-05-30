@@ -1302,159 +1302,159 @@ return [
                             ],
                         ]
                     ],
-                    [
-                        'id' => 'beauty_services',
-                        'heading' => ilangs('Beauty'),
-                        'fields' => [
-                            [
-                                'id' => 'beauty_link',
-                                'label' => '',
-                                'type' => 'link',
-                                'layout' => 'col-12 col-md-8',
-                                'break' => true,
-                                'std' => url('beauty-services'),
-                                'tab' => 'beauty_services'
-                            ],
-                            [
-                                'id' => 'beauty_enable',
-                                'label' => ilangs('Enable'),
-                                'type' => 'switcher',
-                                'layout' => 'col-12 col-md-8',
-                                'std' => 'on',
-                                'break' => true,
-                                'tab' => 'beauty_services',
-                            ],
-                            [
-                                'id' => 'beauty_approve',
-                                'label' => ilangs('Need Approve to Publish'),
-                                'type' => 'switcher',
-                                'layout' => 'col-12 col-md-8',
-                                'std' => 'off',
-                                'break' => true,
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_show_partner_info',
-                                'label' => ilangs('Display owner info in detail page'),
-                                'type' => 'switcher',
-                                'layout' => 'col-12 col-md-8',
-                                'std' => 'on',
-                                'break' => true,
-                                'tab' => 'beauty_service',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_search_radius',
-                                'label' => ilangs('Search Radius'),
-                                'type' => 'number',
-                                'description' => ilangs('are calculated in kilometers from the searched location'),
-                                'layout' => 'col-12 col-md-8',
-                                'std' => '25',
-                                'break' => true,
-                                'min_max_step' => [1, 100, 1],
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_search_number',
-                                'label' => ilangs('Search Number Items'),
-                                'type' => 'number',
-                                'layout' => 'col-12 col-md-8',
-                                'std' => '6',
-                                'break' => true,
-                                'min_max_step' => [1, 50],
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_slider_text',
-                                'label' => ilangs('Text on slider'),
-                                'type' => 'text',
-                                'layout' => 'col-12 col-md-8',
-                                'std' => 'Enjoy a great ride with ibooking',
-                                'break' => true,
-                                'translation' => true,
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_slider',
-                                'label' => ilangs('Slider'),
-                                'type' => 'gallery',
-                                'layout' => 'col-12 col-md-12',
-                                'break' => true,
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_list_destination',
-                                'type' => 'list_item',
-                                'label' => ilangs('List Destinations'),
-                                'translation' => true,
-                                'binding' => 'name',
-                                'fields' => [
-                                    [
-                                        'id' => 'name',
-                                        'label' => ilangs('Name'),
-                                        'type' => 'text',
-                                        'layout' => 'col-12',
-                                        'translation' => true
-                                    ],
-                                    [
-                                        'id' => 'image',
-                                        'label' => ilangs('Feature Image'),
-                                        'type' => 'image',
-                                        'layout' => 'col-12',
-                                        'break' => true,
-                                    ],
-                                    [
-                                        'id' => 'lat',
-                                        'label' => ilangs('Latitude'),
-                                        'type' => 'text',
-                                        'layout' => 'col-12',
-                                    ],
-                                    [
-                                        'id' => 'lng',
-                                        'label' => ilangs('Longitude'),
-                                        'type' => 'text',
-                                        'layout' => 'col-12',
-                                    ]
-                                ],
-                                'layout' => 'col-12 col-md-8',
-                                'break' => true,
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                            [
-                                'id' => 'beauty_testimonials',
-                                'type' => 'list_item',
-                                'label' => ilangs('Testimonial'),
-                                'translation' => true,
-                                'binding' => 'name',
-                                'fields' => [
-                                    [
-                                        'id' => 'name',
-                                        'label' => ilangs('Name'),
-                                        'type' => 'text',
-                                        'layout' => 'col-12',
-                                        'translation' => true
-                                    ],
-                                    [
-                                        'id' => 'content',
-                                        'label' => ilangs('Content'),
-                                        'type' => 'textarea',
-                                        'layout' => 'col-12',
-                                        'translation' => true
-                                    ],
-                                ],
-                                'layout' => 'col-12 col-md-8',
-                                'break' => true,
-                                'tab' => 'beauty_services',
-                                'condition' => 'beauty_enable:on'
-                            ],
-                        ]
-                    ],
+                    // [
+                    //     'id' => 'beauty_services',
+                    //     'heading' => ilangs('Beauty'),
+                    //     'fields' => [
+                    //         [
+                    //             'id' => 'beauty_link',
+                    //             'label' => '',
+                    //             'type' => 'link',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'break' => true,
+                    //             'std' => url('beauty-services'),
+                    //             'tab' => 'beauty_services'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_enable',
+                    //             'label' => ilangs('Enable'),
+                    //             'type' => 'switcher',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => 'on',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_services',
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_approve',
+                    //             'label' => ilangs('Need Approve to Publish'),
+                    //             'type' => 'switcher',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => 'off',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_show_partner_info',
+                    //             'label' => ilangs('Display owner info in detail page'),
+                    //             'type' => 'switcher',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => 'on',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_service',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_search_radius',
+                    //             'label' => ilangs('Search Radius'),
+                    //             'type' => 'number',
+                    //             'description' => ilangs('are calculated in kilometers from the searched location'),
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => '25',
+                    //             'break' => true,
+                    //             'min_max_step' => [1, 100, 1],
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_search_number',
+                    //             'label' => ilangs('Search Number Items'),
+                    //             'type' => 'number',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => '6',
+                    //             'break' => true,
+                    //             'min_max_step' => [1, 50],
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_slider_text',
+                    //             'label' => ilangs('Text on slider'),
+                    //             'type' => 'text',
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'std' => 'Enjoy a great ride with ibooking',
+                    //             'break' => true,
+                    //             'translation' => true,
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_slider',
+                    //             'label' => ilangs('Slider'),
+                    //             'type' => 'gallery',
+                    //             'layout' => 'col-12 col-md-12',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_list_destination',
+                    //             'type' => 'list_item',
+                    //             'label' => ilangs('List Destinations'),
+                    //             'translation' => true,
+                    //             'binding' => 'name',
+                    //             'fields' => [
+                    //                 [
+                    //                     'id' => 'name',
+                    //                     'label' => ilangs('Name'),
+                    //                     'type' => 'text',
+                    //                     'layout' => 'col-12',
+                    //                     'translation' => true
+                    //                 ],
+                    //                 [
+                    //                     'id' => 'image',
+                    //                     'label' => ilangs('Feature Image'),
+                    //                     'type' => 'image',
+                    //                     'layout' => 'col-12',
+                    //                     'break' => true,
+                    //                 ],
+                    //                 [
+                    //                     'id' => 'lat',
+                    //                     'label' => ilangs('Latitude'),
+                    //                     'type' => 'text',
+                    //                     'layout' => 'col-12',
+                    //                 ],
+                    //                 [
+                    //                     'id' => 'lng',
+                    //                     'label' => ilangs('Longitude'),
+                    //                     'type' => 'text',
+                    //                     'layout' => 'col-12',
+                    //                 ]
+                    //             ],
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //         [
+                    //             'id' => 'beauty_testimonials',
+                    //             'type' => 'list_item',
+                    //             'label' => ilangs('Testimonial'),
+                    //             'translation' => true,
+                    //             'binding' => 'name',
+                    //             'fields' => [
+                    //                 [
+                    //                     'id' => 'name',
+                    //                     'label' => ilangs('Name'),
+                    //                     'type' => 'text',
+                    //                     'layout' => 'col-12',
+                    //                     'translation' => true
+                    //                 ],
+                    //                 [
+                    //                     'id' => 'content',
+                    //                     'label' => ilangs('Content'),
+                    //                     'type' => 'textarea',
+                    //                     'layout' => 'col-12',
+                    //                     'translation' => true
+                    //                 ],
+                    //             ],
+                    //             'layout' => 'col-12 col-md-8',
+                    //             'break' => true,
+                    //             'tab' => 'beauty_services',
+                    //             'condition' => 'beauty_enable:on'
+                    //         ],
+                    //     ]
+                    // ],
                 ],
                 'section' => 'service_options',
             ],
@@ -1944,108 +1944,108 @@ return [
             ],
 
             //Social Network
-            [
-                'id' => 'social_heading',
-                'label' => ilangs('Social Login'),
-                'type' => 'heading',
-                'layout' => 'col-12 col-md-8',
-                'std' => '',
-                'section' => 'advanced_options',
-            ],
-            [
-                'id' => 'social_tab',
-                'label' => ilangs('Social Network'),
-                'type' => 'tab',
-                'layout' => 'col-12 col-md-8',
-                'std' => '#e2a03f',
-                'break' => true,
-                'translation' => true,
-                'tabs' => [
-                    [
-                        'id' => 'facebook_login',
-                        'heading' => ilangs('Facebook Login'),
-                        'fields' => [
-                            [
-                                'id' => 'facebook_login_enable',
-                                'label' => ilangs('Enable'),
-                                'type' => 'switcher',
-                                'layout' => 'col-12',
-                                'std' => 'on',
-                                'break' => true,
-                                'tab' => 'facebook_login'
-                            ],
-                            [
-                                'id' => 'facebook_login_client_id',
-                                'label' => ilangs('App ID'),
-                                'type' => 'text',
-                                'layout' => 'col-12 col-md-6',
-                                'condition' => 'facebook_login_enable:on',
-                                'tab' => 'facebook_login',
-                            ],
-                            [
-                                'id' => 'facebook_login_client_secret',
-                                'label' => ilangs('App Secret'),
-                                'type' => 'text',
-                                'layout' => 'col-12 col-md-6',
-                                'break' => true,
-                                'condition' => 'facebook_login_enable:on',
-                                'tab' => 'facebook_login'
-                            ],
-                            [
-                                'id' => 'facebook_login_redirect_url',
-                                'label' => ilangs('Callback Url'),
-                                'type' => 'text',
-                                'layout' => 'col-12',
-                                'break' => true,
-                                'condition' => 'facebook_login_enable:on',
-                                'tab' => 'facebook_login'
-                            ]
-                        ]
-                    ],
-                    [
-                        'id' => 'google_login',
-                        'heading' => ilangs('Google Login'),
-                        'fields' => [
-                            [
-                                'id' => 'google_login_enable',
-                                'label' => ilangs('Enable'),
-                                'type' => 'switcher',
-                                'layout' => 'col-12',
-                                'std' => 'on',
-                                'break' => true,
-                                'tab' => 'google_login'
-                            ],
-                            [
-                                'id' => 'google_login_client_id',
-                                'label' => ilangs('Client ID'),
-                                'type' => 'text',
-                                'layout' => 'col-12 col-md-6',
-                                'condition' => 'google_login_enable:on',
-                                'tab' => 'google_login',
-                            ],
-                            [
-                                'id' => 'google_login_client_secret',
-                                'label' => ilangs('Client Secret'),
-                                'type' => 'text',
-                                'layout' => 'col-12 col-md-6',
-                                'break' => true,
-                                'condition' => 'google_login_enable:on',
-                                'tab' => 'google_login'
-                            ],
-                            [
-                                'id' => 'google_login_redirect_url',
-                                'label' => ilangs('Redirect Url'),
-                                'type' => 'text',
-                                'layout' => 'col-12',
-                                'break' => true,
-                                'condition' => 'google_login_enable:on',
-                                'tab' => 'google_login'
-                            ]
-                        ]
-                    ]
-                ],
-                'section' => 'advanced_options',
-            ],
+            // [
+            //     'id' => 'social_heading',
+            //     'label' => ilangs('Social Login'),
+            //     'type' => 'heading',
+            //     'layout' => 'col-12 col-md-8',
+            //     'std' => '',
+            //     'section' => 'advanced_options',
+            // ],
+            // [
+            //     'id' => 'social_tab',
+            //     'label' => ilangs('Social Network'),
+            //     'type' => 'tab',
+            //     'layout' => 'col-12 col-md-8',
+            //     'std' => '#e2a03f',
+            //     'break' => true,
+            //     'translation' => true,
+            //     'tabs' => [
+            //         [
+            //             'id' => 'facebook_login',
+            //             'heading' => ilangs('Facebook Login'),
+            //             'fields' => [
+            //                 [
+            //                     'id' => 'facebook_login_enable',
+            //                     'label' => ilangs('Enable'),
+            //                     'type' => 'switcher',
+            //                     'layout' => 'col-12',
+            //                     'std' => 'on',
+            //                     'break' => true,
+            //                     'tab' => 'facebook_login'
+            //                 ],
+            //                 [
+            //                     'id' => 'facebook_login_client_id',
+            //                     'label' => ilangs('App ID'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12 col-md-6',
+            //                     'condition' => 'facebook_login_enable:on',
+            //                     'tab' => 'facebook_login',
+            //                 ],
+            //                 [
+            //                     'id' => 'facebook_login_client_secret',
+            //                     'label' => ilangs('App Secret'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12 col-md-6',
+            //                     'break' => true,
+            //                     'condition' => 'facebook_login_enable:on',
+            //                     'tab' => 'facebook_login'
+            //                 ],
+            //                 [
+            //                     'id' => 'facebook_login_redirect_url',
+            //                     'label' => ilangs('Callback Url'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12',
+            //                     'break' => true,
+            //                     'condition' => 'facebook_login_enable:on',
+            //                     'tab' => 'facebook_login'
+            //                 ]
+            //             ]
+            //         ],
+            //         [
+            //             'id' => 'google_login',
+            //             'heading' => ilangs('Google Login'),
+            //             'fields' => [
+            //                 [
+            //                     'id' => 'google_login_enable',
+            //                     'label' => ilangs('Enable'),
+            //                     'type' => 'switcher',
+            //                     'layout' => 'col-12',
+            //                     'std' => 'on',
+            //                     'break' => true,
+            //                     'tab' => 'google_login'
+            //                 ],
+            //                 [
+            //                     'id' => 'google_login_client_id',
+            //                     'label' => ilangs('Client ID'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12 col-md-6',
+            //                     'condition' => 'google_login_enable:on',
+            //                     'tab' => 'google_login',
+            //                 ],
+            //                 [
+            //                     'id' => 'google_login_client_secret',
+            //                     'label' => ilangs('Client Secret'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12 col-md-6',
+            //                     'break' => true,
+            //                     'condition' => 'google_login_enable:on',
+            //                     'tab' => 'google_login'
+            //                 ],
+            //                 [
+            //                     'id' => 'google_login_redirect_url',
+            //                     'label' => ilangs('Redirect Url'),
+            //                     'type' => 'text',
+            //                     'layout' => 'col-12',
+            //                     'break' => true,
+            //                     'condition' => 'google_login_enable:on',
+            //                     'tab' => 'google_login'
+            //                 ]
+            //             ]
+            //         ]
+            //     ],
+            //     'section' => 'advanced_options',
+            // ],
         ]
     ]
 ];
