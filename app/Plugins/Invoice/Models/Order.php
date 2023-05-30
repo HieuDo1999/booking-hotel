@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
-    protected $table = 'gmz_order';
+    protected $table = 'order';
 
     /**
      * @return Collection
