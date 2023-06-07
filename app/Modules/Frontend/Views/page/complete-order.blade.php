@@ -29,7 +29,7 @@
             @elseif(!empty($notices) && $notices == 'payment_incomplete' && $order)
                 <div class="status success">
                     <h1 class="mb-40">{{__('Thanks for your order!')}}</h1>
-                    <p class="note">{{__('Please make a payment using the details below to complete your order.')}}</p>
+                    {{-- <p class="note">{{__('Please make a payment using the details below to complete your order.')}}</p> --}}
                     <p>{{__("We'll email your order completed as soon as we receive your money. This might take a moment but feel free to close this page.")}}</p>
                     @php
                         $desc = get_translate(get_option('payment_'. $order['payment_type'] .'_desc'));
