@@ -41,6 +41,7 @@ $(function () {
             if (typeof respon.redirect !== 'undefined') {
                 setTimeout(function () {
                     window.location.href = respon.redirect;
+                    console.log(respon.redirect);
                 });
             }
 
