@@ -8,8 +8,8 @@ public/storage/
 public/plugins/
 public/themes/
 composer.lock
-public/css/
-public/html/assets/css/
+# public/css/
+# public/html/assets/css/
 node_modules/
 app/Plugins/BluesnapGateway/vendor/
 app/Plugins/BraintreeGateway/vendor/
