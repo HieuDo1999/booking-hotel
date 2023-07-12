@@ -41,6 +41,7 @@ class OrderController extends Controller
 
     public function completeOrder(Request $request)
     {
+        $this->service->paymentChecking($request->post('order_token'), 1);
         $response = $this->service->completeOrderChecking($request);
         $view = apply_filter('gmz_complete_order_view', 'Frontend::page.complete-order', $response);
         return view($view, $response);
@@ -64,7 +65,7 @@ class OrderController extends Controller
         $cart['name'] = $request->first_name . $request->last_name;
         $cart['_token'] = $request->_token;
         $cart['note'] = $request->note;
-        
+
         $checkout = $this->service->checkOut($request);
         // dd($checkout);
         $payment = $this->payment($cart, $checkout);
@@ -96,11 +97,10 @@ class OrderController extends Controller
         $vnp_Locale = 'vn'; //Ngôn ngữ chuyển hướng thanh toán
         $vnp_BankCode = 'VNBANK'; //Mã phương thức thanh toán
         $vnp_IpAddr = $_SERVER['REMOTE_ADDR']; //IP Khách hàng thanh toán
-
         $inputData = array(
             "vnp_Version" => "2.1.0",
             "vnp_TmnCode" => "J2IBXEFP",
-            "vnp_Amount" => $cart['total'],
+            "vnp_Amount" => floor($cart['total'] * 23672 * 100),
             "vnp_Command" => "pay",
             "vnp_CreateDate" => date('YmdHis'),
             "vnp_CurrCode" => "VND",

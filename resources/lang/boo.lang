@@ -204,8 +204,6 @@ Branch
 System
 Settings
 Menus
-Plugins
-Themes
 Users
 All Users
 Partner Request
@@ -438,6 +436,7 @@ Adult Price
 Children Price
 Infant Price
 Date
+Package
 HighLight
 Itinerary
 First Name
@@ -648,6 +647,7 @@ Clear Filter
 Clear
 Space Orders
 Tour Orders
+Plugins
 Update new version
 Plugin Details
 Activated
@@ -706,6 +706,7 @@ Number of Room
 Space Reviews
 Tour Reviews
 Back to all
+Themes
 Theme Details
 Current Theme
 No themes
@@ -1034,7 +1035,6 @@ There are %s Cars
 There are %s Hotel
 There are %s Hotels
 There are %s Beauty
-Find %s
 Number of infant
 Have a coupon?
 Find Apartment
@@ -1152,6 +1152,7 @@ Excludes
 Find Tour
 %s people
 List Of Tours
+This tour is not available.
 Includes/Excludes
 Tours Near By
 %s review for this Tour
@@ -1189,30 +1190,6 @@ Month
 Year (*)
 Year
 CVV (*)
-This service is not available
-Please agree with our Terms and Conditions
-Your email already exists. Please login with that email or use another email
-Have an error when creating new user. Please try again.
-Data is invalid.
-Select Staff
-Select Time
-Business Name
-Open Time
-Weekdays
-Opening Time
-Closing Time
-%s mins
-No services selected yet
-with
-Booking Service
-Book now
-Featured venues
-User Detail
-About %s
-See directions
-Opening time
-Venues near %s
-Book with staff
 BlueSnap
 API Key
 API Password
@@ -1221,25 +1198,6 @@ Merchant ID
 Public Key
 Private Key
 Tawk.to Widget Code
-Document
-Account
-Contact Form
-Login Email
-Register Email
-Reset Password Email
-Partner Request Email
-Partner Approve Email
-Email Content
-Email Content Creator
-Register email for Admin
-Register email for User
-Reset password email
-Partner request email for Admin
-Partner request email for Partner
-Partner approved email
-Email Shortcode
-Shortcode
-Select service
 Ical has been imported successfully.
 iCal Auto-Sync
 Calendar Type
@@ -1260,52 +1218,6 @@ AMOUNT
 BILLING TO
 BOOKING DETAIL
 Service Name
-Back to Editor...
-Page Saved!
-Search Form
-Display search form on home page
-Settings service tab in the search form
-Picker Group
-Image Group
-Show list of destination with count of service
-Show list of property types of Hotel
-Display a space between elements
-Back to Editor
-Edit with Page Builder
-Settings Section
-Layout
-Margin
-Desktop
-Tablet
-Mobile
-Top
-Bottom
-Padding
-Content width
-Boxed
-Full Width
-Column Gap
-Default
-No Gap
-Css ID
-Css Class
-Styles
-Background Color
-Choose a color
-Transparent
-Responsive
-Hide On Desktop
-Hide On Tablet
-Hide On Mobile
-Reverse Columns (Mobile)
-Settings:
-No form fields
-VIEW PAGE
-SAVE CHANGE
-SELECT YOUR STRUCTURE
-Edit Section
-Delete Section
-New Widget
 PayU
 Payment failed
 %s Reservation
@@ -1335,6 +1247,7 @@ The check in or check out field is not empty.
 The check out is later than the check in field.
 Remove unavailability successfully
 Successfully
+Data is invalid.
 Remove custom price successfully
 The price field is required.
 The price field is not a number.
@@ -1414,7 +1327,11 @@ Not found icons
 Alert System
 This Car is not available
 This Beauty is not available
+This service is not available
 This service is not available.
+Please agree with our Terms and Conditions
+Your email already exists. Please login with that email or use another email
+Have an error when creating new user. Please try again.
 The order is invalid
 The time limit for you to cancel your order has expired
 Fail! You cannot do this
@@ -1453,14 +1370,3 @@ The total amount you requested to withdraw is already greater than the amount yo
 You have successfully requested your withdrawal.
 The amount you want to withdraw is incorrect
 Payout account not available
-Text Group
-Text
-Textarea
-Where are you going?
-Check in
-Add dates
-Check out
-Add guests
-Ages 13 or above
-Ages 2–12
-Under 2
