@@ -100,7 +100,7 @@ class OrderController extends Controller
         $inputData = array(
             "vnp_Version" => "2.1.0",
             "vnp_TmnCode" => "J2IBXEFP",
-            "vnp_Amount" => $cart['total'] * 235000,
+            "vnp_Amount" => $cart['total'],
             "vnp_Command" => "pay",
             "vnp_CreateDate" => date('YmdHis'),
             "vnp_CurrCode" => "VND",
